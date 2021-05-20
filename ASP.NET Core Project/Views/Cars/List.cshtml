@@ -1,0 +1,13 @@
+﻿@using ASP.NET_Core_Project.ViewModels;
+@model CarsListViewModel
+
+<h2>@Model.CurrentCategory</h2>
+@{ 
+    foreach (var car in Model.Cars)
+    {
+        <div>
+            <h2>Модель: @car.Name</h2>
+            <p>Цена: @car.Price.ToString("c")</p>
+        </div>
+    }
+}
